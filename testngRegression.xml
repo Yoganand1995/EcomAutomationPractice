@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AllTestsSuite">
+    <listeners>
+        <listener class-name="Resources.Listeners"/>
+    </listeners>
+    <test name="UserRegistration">
+        <groups>
+            <run>
+                <include name="Regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestCases.UserRegistrationTest"/>
+        </classes>
+    </test>
+    <test name="ProductSearch">
+        <groups>
+            <run>
+                <include name="Regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestCases.ProductSearch"/>
+        </classes>
+    </test>
+    <test name="E2E">
+        <groups>
+            <run>
+                <include name="Regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestCases.E2EProductBuy"/>
+        </classes>
+    </test>
+</suite>
+<!-- mvn clean test -DsuiteXmlFile=testng.xml -->
