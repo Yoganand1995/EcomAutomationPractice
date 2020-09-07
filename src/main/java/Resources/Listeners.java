@@ -37,8 +37,7 @@ public class Listeners extends BaseClass implements ITestListener {
             e.printStackTrace();
         }
         try {
-            Test.log(Status.FAIL, (Markup) Test.addScreenCaptureFromPath(getScreenshot(MethodName,FailedDriver),MethodName));
-//            Test.addScreenCaptureFromPath(getScreenshot(MethodName,FailedDriver),MethodName);
+            Test.addScreenCaptureFromPath(getScreenshot(MethodName,FailedDriver),MethodName);
         } catch (IOException e) {
             e.printStackTrace();
         }
