@@ -25,7 +25,7 @@ public class UserRegistrationTest extends BaseClass {
         HomePage homePage = new HomePage(Driver);
         homePage.getSignIn().click();
         RegistrationAndSignIn Reg = new RegistrationAndSignIn(Driver);
-        Reg.getCreateEmailAddress().sendKeys("Test11020@gmail.com");
+        Reg.getCreateEmailAddress().sendKeys("Test1020@gmail.com");
         Reg.getCreateEmailAddressButton().click();
         CreateAccountPage create = new CreateAccountPage(Driver);
         create.getFirstName().sendKeys("Test");
