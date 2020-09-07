@@ -31,7 +31,7 @@ public class BaseClass {
             DesiredCapabilities DCap = DesiredCapabilities.chrome();
             DCap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless");
+//            options.addArguments("--headless");
             options.merge(DCap);
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\main\\java\\Resources\\chromedriver.exe");
             Driver = new ChromeDriver(options);
