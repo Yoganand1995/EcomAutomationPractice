@@ -67,7 +67,7 @@ public class BaseClass {
         TakesScreenshot ScrShot = (TakesScreenshot) FailedDriver;
         File Source = ScrShot.getScreenshotAs(OutputType.FILE);
         String DesFile = System.getProperty("user.dir")+"\\reports\\Screenshots\\"+MethodName+".jpg";
-        FileUtils.copyFile(Source,new File(DesFile));
+        FileUtils.copyFile(Source,new File(DesFile).getAbsoluteFile());
         return DesFile;
     }
 

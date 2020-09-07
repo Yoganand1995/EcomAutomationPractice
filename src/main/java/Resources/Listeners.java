@@ -4,6 +4,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.Markup;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -36,8 +37,8 @@ public class Listeners extends BaseClass implements ITestListener {
             e.printStackTrace();
         }
         try {
-            Test.addScreenCaptureFromPath(getScreenshot(MethodName,FailedDriver),MethodName);
-//            Test.fail(MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot(MethodName,FailedDriver)).build());
+            Test.log(Status.FAIL, (Markup) Test.addScreenCaptureFromPath(getScreenshot(MethodName,FailedDriver),MethodName));
+//            Test.addScreenCaptureFromPath(getScreenshot(MethodName,FailedDriver),MethodName);
         } catch (IOException e) {
             e.printStackTrace();
         }
